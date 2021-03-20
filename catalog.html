@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Каталог</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="Каталог магазина Mishka">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/normalize.css">
+</head>
+
+<body>
+	<header class="page-header page-header--main">
+		<nav class="main-nav">
+			<a class="page-header__logo" href="index.html">
+				<picture>
+					<source media="(min-width: 1250px)" srcset="">
+					<source media="(min-width: 768px)" srcset="">
+					<img class="page-header__logo-image" src="" alt="Логотип магазина Mishka">
+				</picture>
+			</a>
+			<button class="main-nav__toggle--open"><span class="visually-hidden">Открыть главное меню</span></button>
+			<button class="main-nav__toggle--close"><span class="visually-hidden">Закрыть главное меню</span></button>
+			<ul class="main-nav__list">
+				<li class="main-nav__item"><a>Каталог товаров</a></li>
+				<li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
+				<li class="main-nav__item"><a>Поиск по сайту</a></li>
+				<li class="main-nav__item"><a>Корзина: пока пуста</a></li>
+			</ul>
+		</nav>
+		<h1 class="page-header__title">Каталог товаров</h1>
+	</header>
+
+	<main>
+		<section class="catalog">
+			<ul class="catalog__list">
+				<li class="catalog__item">
+					<picture>
+						<source media="(min-width: 1250px)" srcset="">
+						<source media="(min-width: 768px)" srcset="">
+						<img class="catalog__image" src="" alt="Фото товара">
+					</picture>
+					<h3 class="catalog__name">Зайчик-попрыгайчик</h3>
+					<p class="product__characteristics">Рост 30 см, вес 200 г</p>
+					<b class="catalog__price">1 200 руб.</b>
+					<button class="catalog__button"><span class="visually-hidden">Добавить в корзину</span></button>
+				</li>
+				<li class="catalog__item">
+					<picture>
+						<source media="(min-width: 1250px)" srcset="">
+						<source media="(min-width: 768px)" srcset="">
+						<img class="catalog__image" src="" alt="Фото товара">
+					</picture>
+					<h3 class="catalog__name">Корзинка для белья</h3>
+					<p class="product__characteristics">Диаметр 15 см, высота 10 см</p>
+					<b class="catalog__price">690 руб.</b>
+					<button class="catalog__button"><span class="visually-hidden">Добавить в корзину</span></button>
+				</li>
+				<li class="catalog__item">
+					<picture>
+						<source media="(min-width: 1250px)" srcset="">
+						<source media="(min-width: 768px)" srcset="">
+						<img class="catalog__image" src="" alt="Фото товара">
+						<h3 class="catalog__name">Большая корзинка для игрушек</h3>
+						<p class="product__characteristics">Диаметр 30 см, высота 30 см</p>
+						<b class="catalog__price">1 500 руб.</b>
+						<button class="catalog__button"><span class="visually-hidden">Добавить в корзину</span></button>
+					</picture>
+				</li>
+			</ul>
+		</section>
+		<section class="video">
+			<h2 class="video__title">Процесс производства</h2>
+			<div class="video__player">
+				<picture>
+					<source media="(min-width: 1250px)" srcset="">
+					<source media="(min-width: 768px)" srcset="">
+					<img class="video__image" src="" alt="Видео">
+				</picture>
+				<button class="video__player-button"><span class="visually-hidden">Воспроизвести видео</span></button>
+			</div>
+			<p class="video__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+			<button class="video__button button">Сделать заказ</button>
+		</section>
+	</main>
+	
+	<footer class="page__footer">
+		<a class="page-footer__logo">
+			<picture>
+				<source media="(min-width: 1250px)" srcset="">
+				<source media="(min-width: 768px)" srcset="">
+				<img class="page-footer__logo-image" src="" alt="Логотип магазина Mishka">
+			</picture>
+		</a>
+		<ul class="social">
+			<li class="social__item social__item--instagram">
+				<a></a>
+			</li>
+			<li class="social__item social__item--facebook">
+				<a></a>
+			</li>
+			<li class="social__item social__item--twitter">
+				<a></a>
+			</li>
+		</ul>
+		<p class="copyright">
+			<b class="copyright__text">Разработано</b>
+			<a class="copyright__link"></a>
+		</p>
+	</footer>
+	
+	<section class="popup">
+		<h2 class="popup__title">Добавить в корзину</h2>
+		<form action="" class="popup__form">
+			<span class="popup__text">Выберите размер:</span>
+			<p class="popup__input-wrapper">
+				<input class="popup__input" type="text" placeholder="S">
+			</p>
+			<p class="popup__input-wrapper">
+				<input class="popup__input" type="text" placeholder="M">
+			</p>
+			<p class="popup__input-wrapper">
+				<input class="popup__input" type="text" placeholder="L">
+			</p>
+			<button class="popup__button button" type="submit">Добавить</button>
+		</form>
+	</section>
+</body>
+
+</html>
