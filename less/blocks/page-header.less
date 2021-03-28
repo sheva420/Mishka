@@ -1,0 +1,66 @@
+.page-header__side-link {
+	display: none;
+}
+
+.page-header__text {
+	display: none;
+}
+
+.page-header__title {
+	font-family: "OpenSansBold";
+	font-style: 27px;
+	line-height: 30px;
+	font-weight: bold;
+
+	color: #000000;
+}
+
+.page-header__link {
+	display: block;
+
+	font-family: "OpenSansBold";
+	font-style: 19px;
+	line-height: 24px;
+	font-weight: bold;
+	text-decoration: none;
+
+	color: #ffffff;
+	background-color: #63d1bb;
+
+	&:nth-child(2n) {
+		background-color: #56c3b2;
+	}
+}
+
+@media (min-width: @tablet-width) {
+	.page-header__side-link {
+		.link-reset;
+		display: block;
+
+		font-family: "OpenSansBold";
+		font-style: 15px;
+		line-height: 24px;
+		font-weight: bold;
+
+		color: #000000;
+	}
+
+	.page-header__text {
+		display: block;
+		
+		font-family: "OpenSans";
+		font-style: 15px;
+		line-height: 24px;
+		font-weight: normal;
+	}
+
+	.page-header__title {
+		font-size: 43px;
+		line-height: 50px;
+	}
+
+	.page-header__link {
+		font-style: 20px;
+		line-height: 30px;
+	}
+}

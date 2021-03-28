@@ -1,0 +1,67 @@
+.form__text {
+	font-family: "OpenSans";
+	font-size: 13px;
+	line-height: 24px;
+	font-weight: normal;
+}
+
+.form__title {
+	font-family: "OpenSansBold";
+	font-size: 17px;
+	line-height: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+
+	color: @blue-color;
+}
+
+.form__group {
+	border: none;
+}
+
+.form__label {
+	font-family: "OpenSansBold";
+	font-size: 17px;
+	line-height: 18px;
+	font-weight: bold;
+
+	color: #000000;
+}
+
+.form__input {
+	font-family: "OpenSans";
+	font-size: 17px;
+	line-height: 18px;
+	font-weight: normal;
+
+	&::placeholder {
+		opacity: 0.3;
+	}
+}
+
+.form__legend {
+	font-family: "OpenSans";
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: normal;
+}
+
+@media (min-width: @tablet-width) {
+	.form__text {
+		font-size: 17px;
+		line-height: 30px;
+	}
+
+	.form__label {
+		font-size: 19px;
+	}
+
+	.form__input {
+		font-size: 19px;
+	}
+
+	.form__legend {
+		font-size: 17px;
+		line-height: 30px;
+	}
+}
