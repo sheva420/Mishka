@@ -55,6 +55,7 @@ img {
   src: url(../fonts/OpenSans-Bold.woff) format("woff"), url(../fonts/OpenSans-Bold.woff2) format("woff2");
 }
 .main-nav {
+  position: relative;
   font-family: "OpenSansBold";
   font-size: 17px;
   color: #000000;
@@ -70,10 +71,126 @@ img {
   text-decoration: none;
   color: #000000;
 }
+.main-nav__item {
+  position: relative;
+}
+.main-nav__item a {
+  display: block;
+  width: 100%;
+  padding: 27px 0;
+  padding-left: 24%;
+  box-sizing: border-box;
+}
+@media (min-width: 321px) {
+  .main-nav__item {
+    text-align: center;
+  }
+  .main-nav__item a {
+    padding-left: 0;
+  }
+}
+.main-nav__item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #eaeaea;
+}
+.main-nav__item--search svg {
+  position: absolute;
+  top: 32px;
+  left: 10%;
+}
+.main-nav__item--cart svg {
+  position: absolute;
+  top: 31px;
+  left: 10%;
+}
+.main-nav--closed .main-nav__list {
+  display: none;
+}
+.main-nav--closed .main-nav__toggle--close {
+  display: none;
+}
+.main-nav--opened .main-nav__list {
+  display: block;
+}
+.main-nav--opened .main-nav__toggle--open {
+  display: none;
+}
+.main-nav__toggle {
+  position: absolute;
+  border: none;
+  background: none;
+}
+.main-nav__toggle--close {
+  top: 29px;
+  right: 30px;
+  margin: 0;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+}
+.main-nav__toggle--close::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: -6px;
+  width: 27px;
+  height: 2px;
+  background-color: #221f1f;
+  transform: rotate(45deg);
+}
+.main-nav__toggle--close::after {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: -6px;
+  width: 27px;
+  height: 2px;
+  background-color: #221f1f;
+  transform: rotate(-45deg);
+}
+.main-nav__toggle--open {
+  top: 32px;
+  right: 31px;
+  width: 20px;
+  height: 14px;
+}
+.main-nav__toggle--open::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  box-shadow: 0 2px 0 0 #000, 0 8px 0 0 #000, 0 14px 0 0 #000;
+}
 @media (min-width: 768px) {
   .main-nav__item--search a {
     display: none;
   }
+}
+.page-header__logo {
+  position: relative;
+  width: 100%;
+  display: block;
+  padding: 22px 0;
+}
+.page-header__logo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #eaeaea;
+}
+.page-header__logo-image {
+  display: block;
+  margin: 0 auto;
 }
 .page-header__side-link {
   display: none;
