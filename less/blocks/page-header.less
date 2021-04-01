@@ -1,3 +1,19 @@
+.page-header {
+	background-image: url(../img/hero-mobile.jpg);
+	background-position: center 65px;
+	background-repeat: no-repeat;
+	background-color: #f9f9f9;
+	
+	@media(min-width: 321px) {
+		background-image: url(../img/hero-tablet.jpg@1x.jpg);
+		background-size: auto 373px;
+	}
+	
+	&--nav-opened {
+		background-position: center 376px;
+	}
+}
+
 .page-header__logo {
 	position: relative;
 	
@@ -24,25 +40,28 @@
 	margin: 0 auto;
 }
 
-.page-header__side-link {
-	display: none;
-}
-
-.page-header__text {
+.page-header__text-wrapper {
 	display: none;
 }
 
 .page-header__title {
+	.mp-reset;
+	margin-bottom: 120px;
+	
 	font-family: "OpenSansBold";
 	font-style: 27px;
 	line-height: 30px;
 	font-weight: bold;
+	text-align: center;
 
 	color: #000000;
 }
 
 .page-header__link {
+	position: relative;
+	
 	display: block;
+	padding: 28px 30px;
 
 	font-family: "OpenSansBold";
 	font-style: 19px;
@@ -53,8 +72,20 @@
 	color: #ffffff;
 	background-color: #63d1bb;
 
-	&:nth-child(2n) {
+	&:nth-child(2n-1) {
 		background-color: #56c3b2;
+	}
+	
+	&--interior {
+		background-image: url(../img/icon-interior.svg);
+		background-position: 76% 23px;
+		background-repeat: no-repeat;
+	}
+	
+	&--toy {
+		background-image: url(../img/icon-toy.svg);
+		background-position: 78% 21px;
+		background-repeat: no-repeat;
 	}
 }
 

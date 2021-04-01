@@ -47,14 +47,14 @@
 						Корзина: пока пуста</a></li>
 			</ul>
 		</nav>
-		<p>
+		<p class="page-header__text-wrapper">
 			<a class="page-header__side-link" href="#">Новые поступления</a>
 			<a class="page-header__side-link" href="#">Распродажа</a>
 			<span class="page-header__text">Бесплатная доставка по России</span>
 		</p>
-		<h1 class="page-header__title">Милые штуки ручной работы для дома</h1>
-		<a class="page-header__link" href="#">Предметы интерьера</a>
-		<a class="page-header__link" href="#">Детские игрушки</a>
+		<h1 class="page-header__title">Милые штуки ручной <br> работы для дома</h1>
+		<a class="page-header__link page-header__link--interior" href="#">Предметы <br> интерьера</a>
+		<a class="page-header__link page-header__link--toy" href="#">Детские <br> игрушки</a>
 	</header>
 
 	<main>
@@ -63,23 +63,23 @@
 			<span class="top-product__name">Товар недели</span>
 			<p class="top-product__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
 			<table class="top-product__table">
-				<tr>
-					<td>Цвет:</td>
-					<td>«Тиффани»/серый</td>
+				<tr class="top-product__row">
+					<td class="top-product__column1">Цвет:</td>
+					<td class="top-product__column2">«Тиффани»/серый</td>
 				</tr>
-				<tr>
-					<td>Диаметр:</td>
-					<td>25 см</td>
+				<tr class="top-product__row">
+					<td class="top-product__column1">Диаметр:</td>
+					<td class="top-product__column2">25 см</td>
 				</tr>
-				<tr>
-					<td>Высота:</td>
-					<td>15 см</td>
+				<tr class="top-product__row">
+					<td class="top-product__column1">Высота:</td>
+					<td class="top-product__column2">15 см</td>
 				</tr>
 			</table>
-			<picture>
+			<picture class="top-product__picture">
 				<source media="(min-width: 1250px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
 				<source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
-				<img class="top-product__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Фото товара недели">
+				<img class="top-product__image" src="img/triple-set-mobile@2x.jpg" alt="Фото товара недели">
 			</picture>
 			<span class="top-product__price">Цена: 990 руб.</span>
 			<a class="button top-product__button" href="catalog.html">Заказать</a>
@@ -367,6 +367,7 @@
 		var NavToggleOpen = document.querySelector(".main-nav__toggle--open");
 		var NavToggleClose = document.querySelector(".main-nav__toggle--close");
 		var NavMain = document.querySelector(".main-nav");
+		var Header = document.querySelector(".page-header")
 
 		NavMain.classList.remove("main-nav--nojs");
 
@@ -374,12 +375,14 @@
 			evt.preventDefault();
 			NavMain.classList.remove("main-nav--closed");
 			NavMain.classList.add("main-nav--opened");
+			Header.classList.add("page-header--nav-opened");
 		})
 
 		NavToggleClose.addEventListener("click", function(evt) {
 			evt.preventDefault();
 			NavMain.classList.remove("main-nav--opened");
 			NavMain.classList.add("main-nav--closed");
+			Header.classList.remove("page-header--nav-opened");
 		})
 	</script>
 </body>

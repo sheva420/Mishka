@@ -56,9 +56,11 @@ img {
 }
 .main-nav {
   position: relative;
+  margin-bottom: 75px;
   font-family: "OpenSansBold";
   font-size: 17px;
   color: #000000;
+  background-color: #ffffff;
 }
 .main-nav__list {
   list-style-type: none;
@@ -173,6 +175,21 @@ img {
     display: none;
   }
 }
+.page-header {
+  background-image: url(../img/hero-mobile.jpg);
+  background-position: center 65px;
+  background-repeat: no-repeat;
+  background-color: #f9f9f9;
+}
+@media (min-width: 321px) {
+  .page-header {
+    background-image: url(../img/hero-tablet.jpg@1x.jpg);
+    background-size: auto 373px;
+  }
+}
+.page-header--nav-opened {
+  background-position: center 376px;
+}
 .page-header__logo {
   position: relative;
   width: 100%;
@@ -192,21 +209,24 @@ img {
   display: block;
   margin: 0 auto;
 }
-.page-header__side-link {
-  display: none;
-}
-.page-header__text {
+.page-header__text-wrapper {
   display: none;
 }
 .page-header__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 120px;
   font-family: "OpenSansBold";
   font-style: 27px;
   line-height: 30px;
   font-weight: bold;
+  text-align: center;
   color: #000000;
 }
 .page-header__link {
+  position: relative;
   display: block;
+  padding: 28px 30px;
   font-family: "OpenSansBold";
   font-style: 19px;
   line-height: 24px;
@@ -215,8 +235,18 @@ img {
   color: #ffffff;
   background-color: #63d1bb;
 }
-.page-header__link:nth-child(2n) {
+.page-header__link:nth-child(2n-1) {
   background-color: #56c3b2;
+}
+.page-header__link--interior {
+  background-image: url(../img/icon-interior.svg);
+  background-position: 76% 23px;
+  background-repeat: no-repeat;
+}
+.page-header__link--toy {
+  background-image: url(../img/icon-toy.svg);
+  background-position: 78% 21px;
+  background-repeat: no-repeat;
 }
 @media (min-width: 768px) {
   .page-header__side-link {
@@ -246,7 +276,13 @@ img {
     line-height: 30px;
   }
 }
+.top-product {
+  padding: 33px 30px 0;
+}
 .top-product__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 9px;
   font-family: "OpenSansBold";
   font-size: 25px;
   line-height: 30px;
@@ -254,6 +290,8 @@ img {
   color: #000000;
 }
 .top-product__name {
+  display: block;
+  margin-bottom: 24px;
   font-family: "OpenSansBold";
   font-size: 17px;
   line-height: 20px;
@@ -261,14 +299,56 @@ img {
   text-transform: uppercase;
   color: #63d1bb;
 }
+.top-product__text {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 23px;
+}
 .top-product__table {
+  width: 100%;
+  margin-bottom: 28px;
   line-height: 20px;
+}
+.top-product__row {
+  position: relative;
+  display: flex;
+  padding: 11px 0 10px;
+}
+.top-product__row::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ececec;
+}
+.top-product__column1 {
+  width: 38%;
+  display: block;
+}
+.top-product__column2 {
+  width: 62%;
+  display: block;
+}
+.top-product__picture {
+  display: block;
+}
+.top-product__image {
+  width: 100%;
 }
 .top-product__price {
   display: block;
+  margin-top: 26px;
+  margin-bottom: 25px;
   font-family: "OpenSansBold";
   font-size: 17px;
   font-weight: bold;
+  text-align: center;
+}
+.top-product__button {
+  max-width: 260px;
+  margin: 0 auto;
 }
 @media (min-width: 768px) {
   .top-product__title {
@@ -296,15 +376,18 @@ img {
 }
 .button {
   display: block;
+  padding: 14px 10px;
   font-family: "OpenSansBold";
   font-size: 17px;
   line-height: 20px;
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
   color: #444444;
   background: none;
-  border: none;
+  border: 2px solid #444444;
+  box-sizing: border-box;
 }
 .about-us__title {
   font-family: "OpenSansBold";
