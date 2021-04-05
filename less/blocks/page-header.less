@@ -57,6 +57,14 @@
 	color: #000000;
 }
 
+.page-header__link-wrapper {
+	.list-reset;
+	
+	& li:nth-child(2n) .page-header__link {
+		background-color: #56c3b2;
+	}
+}
+
 .page-header__link {
 	position: relative;
 	
@@ -72,9 +80,7 @@
 	color: #ffffff;
 	background-color: #63d1bb;
 
-	&:nth-child(2n-1) {
-		background-color: #56c3b2;
-	}
+	
 	
 	&--interior {
 		background-image: url(../img/icon-interior.svg);
@@ -90,9 +96,55 @@
 }
 
 @media (min-width: @tablet-width) {
+	.page-header {
+		position: relative;
+		
+		background-image: url(../img/hero-tablet.jpg@1x.jpg);
+		background-position: center bottom;
+		background-size: auto;
+		
+		&::after {
+			content: '';
+			
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			
+			width: 100%;
+			height: 10px;
+			
+			background-image: url(../img/bg-zigzag-fill.svg);
+			background-position: 0 0;
+			background-repeat: repeat;
+		}
+	}
+	
+	.page-header__logo {
+		width: auto;
+		padding: 22px 0 20px 0;
+		margin-right: auto;
+		
+		&::after {
+			content: none;
+		}
+	}
+	
+	.page-header__logo-image {
+		margin: 0;
+	}
+	
+	.page-header__text-wrapper {
+		position: absolute;
+		top: 108px;
+		right: 50px;
+		
+		.mp-reset;
+		display: block;
+	}
+	
 	.page-header__side-link {
 		.link-reset;
-		display: block;
+		display: none;
 
 		font-family: "OpenSansBold";
 		font-style: 15px;
@@ -112,12 +164,26 @@
 	}
 
 	.page-header__title {
+		margin-bottom: 370px;
+		
 		font-size: 43px;
 		line-height: 50px;
 	}
+	
+	.page-header__link-wrapper {
+		width: 100%;
+		padding: 0 50px;
+		display: flex;
+		
+		box-sizing: border-box;
+		
+		& li {
+			width: 50%;
+		}
+	}
 
-	.page-header__link {
-		font-style: 20px;
+	.page-header__link {		
+		font-size: 20px;
 		line-height: 30px;
 	}
 }
