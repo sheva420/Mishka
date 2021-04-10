@@ -2,7 +2,7 @@
 	background-color: #f1f1f1;
 }
 
-.page__footer-wrapper {
+.page-footer__wrapper {
 	padding: 25px 30px 23px;
 }
 
@@ -11,7 +11,17 @@
 }
 
 @media (min-width: @tablet-width) {
+	.page-footer__wrapper {
+		display: flex;
+		padding: 51px 50px;
+	}
+	
 	.page-footer__logo {
 		display: block;
+		margin-right: 159px;
+		
+		& picture {
+			display: block;
+		}
 	}
 }

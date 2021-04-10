@@ -75,6 +75,7 @@
 	
 	width: 50%;
 	height: 50px;
+	.mp-reset;
 	
 	border: 1px solid #ececec;
 	background: none;
@@ -124,13 +125,55 @@
 }
 
 @media (min-width: @tablet-width) {
+	.reviews {
+		position: relative;
+		
+		padding: 79px 50px 120px;
+		display: flex;
+		flex-wrap: wrap;
+		
+		background-image: url(../img/review@1x.jpg);
+		background-position: 0 0;
+		background-repeat: no-repeat;
+		
+		&::after {
+			height: 16px;
+		}
+	}
+	
 	.reviews__title {
+		margin-bottom: 57px;
+		
 		font-size: 43px;
 		line-height: 50px;
 	}
 	
 	.reviews__text {
+		margin-bottom: 60px;
 		font-size: 17px;
+	}
+	
+	.reviews__author-nickname {
+		margin-bottom: 0;
+	}
+	
+	.reviews__nav {
+		width: 167px;
+		margin-left: auto;
+		margin-bottom: 0;
+	}
+	
+	.reviews__prev,
+	.reviews__next {
+		border: none;
+	}
+	
+	.reviews__button {
+		position: absolute;
+		top: 79px;
+		right: 50px;
+		
+		width: 175px;
 	}
 }
 

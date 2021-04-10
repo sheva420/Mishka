@@ -156,14 +156,61 @@
 }
 
 @media (min-width: @tablet-width) {
+	.about-us {
+		padding: 56px 50px 0;
+		margin-bottom: 81px;
+	}
+	
 	.about-us__title {
+		margin-bottom: 44px;
+		
 		font-size: 43px;
 		line-height: 50px;
 	}
 
 	.about-us__list {
+		display: flex;
+		flex-wrap: wrap;
+		
 		font-size: 20px;
 		line-height: 22px;
+	}
+	
+	.about-us__item {
+		width: 50%;
+		margin-bottom: 55px;
+		
+		&--flower {
+			order: 1;
+		}
+		
+		&--money {
+			order: 3;
+		}
+		
+		&--heart {
+			margin-bottom: 0;
+			
+			order: 5;
+		}
+		
+		&--clew {
+			order: 2;
+		}
+		
+		&--rocket {
+			order: 4;
+		}
+		
+		&--gift {
+			margin-bottom: 0;
+			
+			order: 6;
+		}
+		
+		& br {
+			display: block;
+		}
 	}
 }
 
