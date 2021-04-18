@@ -178,8 +178,31 @@
 }
 
 @media (min-width: @desktop-width) {
+	.reviews {
+		padding: 78px 100px 185px 275px;
+		
+		background-position: 100px 0;
+		
+		&::after {
+			width: 1050px;
+			height: 22px;
+			
+			left: 50%;
+
+			transform: translateX(-50%);
+		}
+	}
+	
 	.reviews__title {
 		font-size: 53px;
 		line-height: 57px;
+	}
+	
+	.reviews__text {
+		margin-bottom: 40px;
+	}
+	
+	.reviews__button {
+		right: 100px;
 	}
 }

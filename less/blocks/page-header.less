@@ -179,6 +179,7 @@
 		width: 100%;
 		padding: 0 50px;
 		display: flex;
+		flex-wrap: wrap;
 
 		box-sizing: border-box;
 
@@ -194,6 +195,11 @@
 }
 
 @media (min-width: @desktop-width) {
+	.page-header {
+		background-image: url(../img/hero-desktop@1x.jpg);
+		background-position: center 89px;
+	}
+	
 	.page-header__logo {
 		position: absolute;
 		top: 50%;
@@ -207,7 +213,7 @@
 		right: 0;
 
 		width: 100%;
-		padding: 20px 50px;
+		padding: 20px 100px 0 50px;
 		display: flex;
 
 		box-sizing: border-box;
@@ -221,5 +227,25 @@
 
 	.page-header__text {
 		margin-left: auto;
+	}
+	
+	.page-header__text {
+		margin-bottom: 352px;
+	}
+	
+	.page-header__link-wrapper {
+		padding: 0 100px;
+	}
+	
+	.page-header__link {
+		padding: 31px 38px;
+		
+		&--interior {
+			background-position: 448px 30px;
+		}
+		
+		&--toy {
+			background-position: 430px 31px;
+		}
 	}
 }

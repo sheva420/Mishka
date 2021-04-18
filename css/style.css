@@ -252,6 +252,7 @@ img {
   .main-nav__list {
     position: relative;
     width: 100%;
+    padding-right: 50px;
   }
   .main-nav__list::after {
     content: '';
@@ -435,6 +436,7 @@ img {
     width: 100%;
     padding: 0 50px;
     display: flex;
+    flex-wrap: wrap;
     box-sizing: border-box;
   }
   .page-header__link-wrapper li {
@@ -451,6 +453,10 @@ img {
   }
 }
 @media (min-width: 1250px) {
+  .page-header {
+    background-image: url(../img/hero-desktop@1x.jpg);
+    background-position: center 89px;
+  }
   .page-header__logo {
     position: absolute;
     top: 50%;
@@ -461,7 +467,7 @@ img {
     top: 88px;
     right: 0;
     width: 100%;
-    padding: 20px 50px;
+    padding: 20px 100px 0 50px;
     display: flex;
     box-sizing: border-box;
   }
@@ -472,6 +478,21 @@ img {
   }
   .page-header__text {
     margin-left: auto;
+  }
+  .page-header__text {
+    margin-bottom: 352px;
+  }
+  .page-header__link-wrapper {
+    padding: 0 100px;
+  }
+  .page-header__link {
+    padding: 31px 38px;
+  }
+  .page-header__link--interior {
+    background-position: 448px 30px;
+  }
+  .page-header__link--toy {
+    background-position: 430px 31px;
   }
 }
 .top-product {
@@ -636,9 +657,46 @@ img {
   }
 }
 @media (min-width: 1250px) {
+  .top-product {
+    position: relative;
+    padding: 71px 100px 96px;
+  }
+  .top-product::after {
+    left: 50%;
+    width: 1050px;
+    height: 22px;
+    transform: translateX(-50%);
+  }
+  .top-product__title-wrapper {
+    position: absolute;
+    top: 133px;
+    left: 100px;
+    z-index: 1;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
   .top-product__title {
     font-size: 53px;
     line-height: 57px;
+  }
+  .top-product__name {
+    width: 175px;
+    margin-left: 0;
+  }
+  .top-product__content-wrapper {
+    padding-left: 175px;
+  }
+  .top-product__text-wrapper {
+    width: 292px;
+    padding-top: 160px;
+    margin-right: auto;
+  }
+  .top-product__picture {
+    width: 525px;
+  }
+  .top-product__price-wrapper {
+    width: 292px;
+    margin-left: 175px;
   }
 }
 .button {
@@ -822,7 +880,12 @@ img {
   }
 }
 @media (min-width: 1250px) {
+  .about-us {
+    padding: 68px 275px 0;
+    margin-bottom: 88px;
+  }
   .about-us__title {
+    margin-bottom: 41px;
     font-size: 53px;
     line-height: 57px;
   }
@@ -963,9 +1026,25 @@ img {
   }
 }
 @media (min-width: 1250px) {
+  .reviews {
+    padding: 78px 100px 185px 275px;
+    background-position: 100px 0;
+  }
+  .reviews::after {
+    width: 1050px;
+    height: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .reviews__title {
     font-size: 53px;
     line-height: 57px;
+  }
+  .reviews__text {
+    margin-bottom: 40px;
+  }
+  .reviews__button {
+    right: 100px;
   }
 }
 .contacts {
@@ -1003,6 +1082,9 @@ img {
 }
 .contacts__table td:nth-child(2) {
   width: 70%;
+}
+.contacts__table br {
+  display: block;
 }
 .contacts__email span {
   position: relative;
@@ -1108,9 +1190,52 @@ img {
   }
 }
 @media (min-width: 1250px) {
+  .contacts {
+    padding: 71px 100px 0 275px;
+    margin-bottom: 105px;
+    display: flex;
+  }
+  .contacts::after {
+    top: 133px;
+    left: 163px;
+  }
+  .contacts__wrapper {
+    padding: 80px 0 0;
+  }
   .contacts__title {
     font-size: 53px;
     line-height: 57px;
+  }
+  .contacts__table {
+    margin-bottom: 0;
+  }
+  .contacts__table tbody {
+    flex-direction: column;
+  }
+  .contacts__table tr {
+    width: 100%;
+  }
+  .contacts__table tr:first-child {
+    margin-bottom: 35px;
+  }
+  .contacts__table td:first-child {
+    width: 77px;
+  }
+  .contacts__table td:nth-child(2n) {
+    width: 221px;
+  }
+  .contacts__table br {
+    display: block;
+  }
+  .contacts__map {
+    width: 525px;
+    margin-left: auto;
+    margin-bottom: 0;
+  }
+  .contacts__button {
+    position: absolute;
+    bottom: 0;
+    left: 275px;
   }
 }
 .page__footer {
@@ -1133,6 +1258,14 @@ img {
   }
   .page-footer__logo picture {
     display: block;
+  }
+}
+@media (min-width: 1250px) {
+  .page-footer__wrapper {
+    padding: 51px 100px;
+  }
+  .page-footer__logo {
+    margin-right: auto;
   }
 }
 .social {
