@@ -1,7 +1,8 @@
 .page-header {
 	padding-bottom: 73px;
-	
+
 	background-color: #f1f1f1;
+
 
 	&--main {
 		background-image: url(../img/hero-mobile.jpg);
@@ -60,7 +61,7 @@
 	text-align: center;
 
 	color: #000000;
-	
+
 	&--index {
 		margin-bottom: 120px;
 	}
@@ -107,10 +108,18 @@
 @media (min-width: @tablet-width) {
 	.page-header {
 		position: relative;
-
-		background-image: url(../img/hero-tablet.jpg@1x.jpg);
-		background-position: center bottom;
-		background-size: auto;
+		
+		padding-bottom: 72px;
+		
+		background-image: none;
+		
+		&--main {
+			padding-bottom: 0;
+			
+			background-image: url(../img/hero-tablet.jpg@1x.jpg);
+			background-position: center bottom;
+			background-size: auto;
+		}
 
 		&::after {
 			content: '';
@@ -178,10 +187,14 @@
 	}
 
 	.page-header__title {
-		margin-bottom: 370px;
+		margin-bottom: 0;
 
 		font-size: 43px;
 		line-height: 50px;
+		
+		&--index {
+			margin-bottom: 370px;
+		}
 	}
 
 	.page-header__link-wrapper {
@@ -207,12 +220,17 @@
 	.page-header {
 		background-image: url(../img/hero-desktop@1x.jpg);
 		background-position: center 89px;
+
+		&--main {
+			padding-bottom: 0;
+		}
 	}
 
 	.page-header__logo {
 		position: absolute;
 		top: 50%;
 		left: 50%;
+		z-index: 1;
 
 		transform: translate(-50%, -50%);
 	}

@@ -8,7 +8,7 @@
 
 	color: #000000;
 	background-color: #ffffff;
-	
+
 	&--index {
 		margin-bottom: 75px;
 	}
@@ -160,7 +160,11 @@
 	.main-nav {
 		display: flex;
 		padding: 0 50px;
-		margin-bottom: 160px;
+		margin-bottom: 101px;		
+
+		&--index {
+			margin-bottom: 160px;
+		}
 
 		&::after {
 			content: '';
@@ -189,71 +193,71 @@
 
 	.main-nav--closed,
 	.main-nav--opened {
-		
+
 		& .main-nav__list {
 			display: flex;
 		}
 	}
-	
+
 	.main-nav__list {
 		flex-wrap: wrap;
 	}
 
 	.main-nav__item {
-		
+
 		& a {
 			padding: 32px 0;
 		}
-		
+
 		&--search {
 			width: 82px;
 			order: 1;
-			
+
 			border: 1px solid #e7e7e7;
 			border-top: none;
-			
+
 			& svg {
 				top: 50%;
 				left: 50%;
-				
+
 				transform: translate(-50%, -50%);
 			}
 		}
-		
+
 		&--cart {
 			padding-left: 83px;
 			order: 2;
-			
+
 			& svg {
 				top: 34px;
 				left: 31px;
 			}
 		}
-		
+
 		&--catalog {
 			position: absolute;
 			top: 88px;
 			left: 50px;
-			
+
 			order: 3;
-			
+
 			& a {
 				padding: 20px 0;
 			}
 		}
-		
+
 		&--order {
 			position: absolute;
 			top: 88px;
 			left: 217px;
-			
+
 			order: 4;
-			
+
 			& a {
 				padding: 20px 0;
 			}
 		}
-		
+
 		&::after {
 			content: none;
 		}
@@ -263,18 +267,18 @@
 @media (min-width: @desktop-width) {
 	.main-nav {
 		position: relative;
-				
+
 		&::after {
 			content: none;
 		}
 	}
-	
+
 	.main-nav__list {
 		position: relative;
-		
+
 		width: 100%;
 		padding-right: 50px;
-		
+
 		&::after {
 			content: '';
 
@@ -288,45 +292,45 @@
 			background-color: #e7e7e7;
 		}
 	}
-	
+
 	.main-nav__item {
 		width: 234px;
-		
+
 		box-sizing: border-box;
-		
+
 		&--catalog {
 			position: static;
-			
+
 			order: 1;
-			
+
 			border-right: 1px solid #e7e7e7;
-			
+
 			& a {
 				padding: 32px 0 32px 50px;
 				text-align: left;
 			}
 		}
-		
+
 		&--order {
 			position: static;
-						
+
 			order: 2;
-			
+
 			& a {
 				padding: 32px 0;
 			}
 		}
-		
+
 		&--search {
 			width: 82px;
 			margin-left: auto;
-			
+
 			order: 3;
 		}
-		
+
 		&--cart {
 			width: 266px;
-			
+
 			order: 4;
 		}
 	}
