@@ -1,7 +1,7 @@
 .main-nav {
 	position: relative;
 
-	margin-bottom: 73px;
+//	margin-bottom: 73px;
 
 	font-family: "OpenSansBold";
 	font-size: 17px;
@@ -12,6 +12,11 @@
 	&--index {
 		margin-bottom: 75px;
 	}
+}
+
+.main-nav__wrapper {
+	max-width: 1150px;
+	margin: 0 auto;
 }
 
 .main-nav__list {
@@ -158,9 +163,9 @@
 
 @media (min-width: @tablet-width) {
 	.main-nav {
-		display: flex;
+//		display: flex;
 		padding: 0 50px;
-		margin-bottom: 101px;		
+//		margin-bottom: 101px;		
 
 		&--index {
 			margin-bottom: 160px;
@@ -178,6 +183,10 @@
 
 			background-color: #e7e7e7;
 		}
+	}
+	
+	.main-nav__wrapper {
+		display: flex;
 	}
 
 	.main-nav__toggle {
@@ -267,6 +276,8 @@
 @media (min-width: @desktop-width) {
 	.main-nav {
 		position: relative;
+		
+		margin-bottom: 0;
 
 		&::after {
 			content: none;
