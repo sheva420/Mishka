@@ -1,8 +1,6 @@
 .main-nav {
 	position: relative;
 
-//	margin-bottom: 73px;
-
 	font-family: "OpenSansBold";
 	font-size: 17px;
 
@@ -37,6 +35,15 @@
 		padding-left: 24%;
 
 		box-sizing: border-box;
+
+		&:hover,
+		&:focus {
+			opacity: 0.6;
+		}
+
+		&:active {
+			opacity: 0.3;
+		}
 	}
 
 	@media (min-width: 321px) {
@@ -60,16 +67,48 @@
 		background-color: #eaeaea;
 	}
 
-	&--search svg {
-		position: absolute;
-		top: 32px;
-		left: 10%;
+	&--search {
+		
+		& svg {
+			position: absolute;
+			top: 32px;
+			left: 10%;
+		}
+		
+		&:hover,
+		&:focus {
+			cursor: pointer;
+			
+			& svg {
+				fill: @blue-color;
+			}
+		}
+		
+		&:active svg {
+			opacity: 0.3;
+		}
 	}
 
-	&--cart svg {
-		position: absolute;
-		top: 31px;
-		left: 10%;
+	&--cart {
+		
+		& svg {
+			position: absolute;
+			top: 31px;
+			left: 10%;
+		}
+		
+		&:hover,
+		&:focus {
+			cursor: pointer;
+			
+			& svg {
+				fill: @blue-color;
+			}
+		}
+		
+		&:active svg {
+			opacity: 0.3;
+		}
 	}
 }
 
@@ -163,9 +202,9 @@
 
 @media (min-width: @tablet-width) {
 	.main-nav {
-//		display: flex;
+		//		display: flex;
 		padding: 0 50px;
-//		margin-bottom: 101px;		
+		//		margin-bottom: 101px;		
 
 		&--index {
 			margin-bottom: 160px;
@@ -184,7 +223,7 @@
 			background-color: #e7e7e7;
 		}
 	}
-	
+
 	.main-nav__wrapper {
 		display: flex;
 	}
@@ -278,7 +317,7 @@
 @media (min-width: @desktop-width) {
 	.main-nav {
 		position: relative;
-		
+
 		margin-bottom: 0;
 
 		&::after {
