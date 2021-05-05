@@ -27,6 +27,19 @@
 	.copyright {
 		.mp-reset;
 		margin-left: auto;
+		
+		&:hover,
+		&:focus {
+			cursor: pointer;
+			
+			& svg {
+				fill: #46c1ae;
+			}
+		}
+		
+		&:active {
+			opacity: 0.3;
+		}
 	}
 	
 	.copyright__link {

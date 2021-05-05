@@ -199,6 +199,12 @@
 	&::placeholder {
 		opacity: 0.3;
 	}
+	
+	&:hover,
+	&:focus {
+		border-bottom: 2px solid #62d1ba;
+		outline: none;
+	}
 
 	&--radio + .form__label {
 		padding: 10px 0 10px 62px;
@@ -213,7 +219,7 @@
 			width: 36px;
 			height: 36px;
 
-			border: 1px solid #444444;
+			border: 1px solid @grey-color;
 			border-radius: 50%;
 		}
 	}
@@ -232,6 +238,20 @@
 		border-radius: 50%;
 	}
 
+	&--radio:hover + .form__label,
+	&--radio:focus + .form__label {
+		cursor: pointer;
+
+		&::before {
+			border: 1px solid #62d1ba;
+		}
+	}
+
+	&--radio:active + .form__label::before {
+		border: 1px solid @grey-color;
+		opacity: 0.3;
+	}
+
 	&--checkbox + .form__label {
 		padding: 12px 0 10px 64px;
 
@@ -245,7 +265,7 @@
 			width: 36px;
 			height: 36px;
 
-			border: 2px solid #444444;
+			border: 2px solid @grey-color;
 		}
 	}
 
@@ -254,7 +274,23 @@
 		background-size: 22px 16px;
 		background-position: 9px 12px;
 		background-repeat: no-repeat;
+	}
 
+	&--checkbox:hover + .form__label,
+	&--checkbox:focus + .form__label {
+		cursor: pointer;
+
+		&::before {
+			border: 2px solid #62d1ba;
+		}
+	}
+
+	&--checkbox:active + .form__label {
+
+		&::before {
+			border: 2px solid @grey-color;
+			opacity: 0.3;
+		}
 	}
 
 	&--phone {
@@ -268,7 +304,12 @@
 	&--add {
 		padding: 15px;
 
-		border: 2px solid #444444;
+		border: 2px solid @grey-color;
+		
+		&:hover,
+		&:focus {
+			border: 2px solid #62d1ba;
+		}
 	}
 }
 
@@ -509,44 +550,44 @@
 				//			}
 			}
 		}
-		
+
 		&--full-name {
-			
+
 			& .form__input-wrapper {
 				padding-right: 175px;
 			}
 		}
-		
+
 		&--phone {
-			
+
 			& .form__input-label-wrapper {
 				padding-right: 175px;
-				
+
 				&::after {
 					right: 183px;
 				}
 			}
 		}
-		
+
 		&--email {
-			
+
 			& .form__input-label-wrapper {
 				padding-right: 175px;
-				
+
 				&::after {
 					right: 179px;
 				}
 			}
 		}
-		
+
 		&--add {
-			
+
 			& .form__input-label-wrapper {
 				padding-right: 175px;
 			}
 		}
 	}
-	
+
 	.form__legend-button-wrapper {
 		padding: 0 225px;
 	}

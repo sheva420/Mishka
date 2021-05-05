@@ -59,7 +59,7 @@
 
 .contacts__email {
 
-	& span {
+	& a {
 		position: relative;
 
 		&::after {
@@ -73,6 +73,20 @@
 			height: 1px;
 
 			background-color: #62d1ba;
+		}
+		
+		&:hover,
+		&:focus {
+			color: #46c1ae;
+			cursor: pointer;
+			
+			&::after {
+				background-color: #46c1ae;
+			}
+		}
+		
+		&:active {
+			opacity: 0.3;
 		}
 	}
 }

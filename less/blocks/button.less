@@ -14,4 +14,18 @@
 	background: none;
 	border: 2px solid @grey-color;
 	box-sizing: border-box;
+
+	&:hover,
+	&:focus {
+		color: #ffffff;
+		background-color: @grey-color;
+		cursor: pointer;
+	}
+	
+	&:active {
+		
+		& span {
+			opacity: 0.3;
+		}
+	}
 }
